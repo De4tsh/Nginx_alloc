@@ -1,5 +1,6 @@
 # Nginx 内存池整体构造
-![Nginx_内存池.drawio](https://raw.githubusercontent.com/De4tsh/typoraPhoto/main/img/202212171526300.png)
+![Nginx_内存池 drawio](https://user-images.githubusercontent.com/52061639/208250181-828f87bb-9ab6-40cb-a5ac-c6b5888f6648.png)
+
 
 # 基本介绍
 
