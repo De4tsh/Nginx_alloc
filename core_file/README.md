@@ -4,7 +4,7 @@
 
 ![image-20221219160918277](https://raw.githubusercontent.com/De4tsh/typoraPhoto/main/img/202212191609400.png)
 
-最初直接编译为 64 位程序，运行后触发段错误，通过调试其 core 文件，发现问题发生在 `large->alloc = p` 赋值语句处，进一步检查 large 这个指针的值，看到了一个 `4` 字节的指针，在 `64` 位环境下显然是错误的
+最初直接编译为 `64` 位程序，运行后触发段错误，通过调试其 core 文件，发现问题发生在 `large->alloc = p` 赋值语句处，进一步检查 large 这个指针的值，看到了一个 `4` 字节的指针，在 `64` 位环境下显然是错误的
 
 进一步跟进发现，问题出现在以下所述的表达式宏中
 
@@ -29,7 +29,7 @@
 
 ### 解决
 
-x64 环境中直接将 `uintptr_t` 直接定义为 `unsigned long int`
+`x64` 环境中直接将 `uintptr_t` 直接定义为 `unsigned long int`
 
 
 
